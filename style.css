@@ -2,9 +2,13 @@ body {
   font-family: "Helvetica Neue", Helvetica, Arial, Helvetica, sans-serif;
 }
 
+p {
+  font-size: 24px;
+}
+
 /* Main container, fill 80% of the screen */
 .container-main {
-  display: flex; /* don't use flexbox here */
+  display: block; /* don't use flexbox here */
   align-items: center;
   background-color: #d5e0e7;
   margin-left: auto;
@@ -39,7 +43,7 @@ body {
     text-align: center;
     text-decoration: none;
     display: inline-block;
-    font-size: 16px;
+    font-size: 26px;
     margin: 5px;
     border: 5px solid #d5e0e7;
     border-radius: 5px;
@@ -50,7 +54,20 @@ body {
   .button:hover {
     background-color: #d5e0e7;
   }
-  
+
+/* Mobile Stuff */
+@media (max-width: 600px) {
+  .container-button {
+    width: 100%;
+    flex-wrap: wrap; /* Allow wrapping */
+    display: flex;
+    flex-direction: column; /* Make items stack vertically */
+  }
+  .button {
+    width: 100%; /* Make each button fill the width of the container */
+    margin-bottom: 10px; /* Add margin between buttons */
+  }
+}
 /*
 
 */

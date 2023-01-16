@@ -6,16 +6,20 @@ p {
   font-size: 24px;
 }
 
-/* Remove the top margin for paragraph following a header */
-/* since the header already has margin-bottom */
+/* To avoid duplicate margins on paragraph following h1 */
 h1 + p {
   margin-top: 0;
 }
 
+/* Override footer font size */
+.footer p {
+  font-size: 20px;
+}
 
-/* Main container, fill 80% of the screen */
+/* Main container, fill 80% of the screen with a background */
 .container-main {
-  display: block; /* don't use flexbox here */
+  display: block;
+  /* don't use flexbox here */
   align-items: center;
   background-color: #d5e0e7;
   margin-left: auto;
@@ -29,55 +33,46 @@ h1 + p {
   flex-wrap: nowrap;
 }
 
+/* Container for the text */
 .container-p {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 80%;
   margin: 0 auto;
+  width: 80%;
 }
 
+/* Force buttons to one column */
 .container-button {
-    display: flex;
-    flex-direction: column;
-    flex-wrap: nowrap; /* force buttons to one column only, also set button width=100%*/
-    align-items: center;
-  }
-  
-  .button {
-    background-color: white;
-    color: black;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 26px;
-    margin: 5px;
-    border: 5px solid #d5e0e7;
-    border-radius: 5px;
-    width:100%;
-    white-space: nowrap; /* Prevents text from wrapping */
-  }
-  
-  .button:hover {
-    background-color: #d5e0e7;
-  }
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  align-items: center;
+}
 
-/* Mobile Stuff */
-/*
-@media (max-width: 600px) {
-  .container-button {
-    width: 100%;
-    flex-wrap: wrap;
-    display: flex;
-    flex-direction: column; 
-  }
+.button {
+  background-color: white;
+  color: black;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 26px;
+  margin: 5px;
+  border: 5px solid #d5e0e7;
+  border-radius: 5px;
+  width: 100%;
+  white-space: nowrap;
+  /* Prevents text from wrapping */
+}
+
+.button:hover {
+  background-color: #d5e0e7;
+}
+
+/* In case we really get squeezed */
+@media (max-width: 275px) {
   .button {
-    width: 100%;
-    margin-bottom: 10px; 
+    width: 70%;
   }
 }
-*/
-/*
-
-*/

@@ -1,1 +1,1 @@
-It's a simple landing page for my website at maroukis.net. 
+It's a simple hand crafted landing page for my website at <https://maroukis.net>.

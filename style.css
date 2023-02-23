@@ -6,9 +6,14 @@ p {
   font-size: 24px;
 }
 
+p + .small{
+  font-size: 20px;
+}
+
 /* To avoid duplicate margins on paragraph following h1 */
 h1 + p {
   margin-top: 0;
+  margin-bottom: 0;
 }
 
 /* Override footer font size */
